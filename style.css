@@ -126,6 +126,15 @@ p {
   border-radius: var(--size-border-radius);
 }
 
+.navbar__toggle-btn {
+  display: none;
+  position: absolute;
+  top: 24px;
+  right: 32px;
+  font-size: 24px;
+  color: var(--color-white);
+}
+
 /* Home */
 #home {
   background: url("images/home-background.webp") center/cover no-repeat;
@@ -449,4 +458,45 @@ p {
 .contact__links i:hover {
   transform: scale(1.1);
   color: var(--color-yellow);
+}
+
+/* For below 768px screen width */
+@media screen and (max-width: 768px) {
+  /* navBar */
+  #navBar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar__menu {
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    display: none;
+  }
+
+  .navbar__toggle-btn {
+    display: block;
+  }
+
+  .about__majors {
+    flex-direction: column;
+  }
+
+  .major {
+    margin-bottom: 38px;
+  }
+
+  .skillset {
+    flex-direction: column;
+  }
+
+  .project {
+    flex-grow: 1;
+  }
+
+  .testimonial__avators {
+    width: 80px;
+    height: 80px;
+  }
 }
