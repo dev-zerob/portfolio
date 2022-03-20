@@ -384,3 +384,44 @@ p {
   margin-top: 8px;
   background-color: var(--color-dark-white);
 }
+
+/* Testimonials */
+#testimonials {
+  background-color: var(--color-light-white);
+}
+
+.testimonials {
+  margin: 40px;
+}
+
+.testimonial {
+  display: flex;
+  margin: 32px 0;
+}
+
+.testimonial__avators {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+
+.testimonial__avators:nth-child(odd) {
+  margin-right: 40px;
+}
+.testimonial__avators:nth-child(even) {
+  margin-left: 40px;
+}
+
+.testimonials__speech-bubble {
+  padding: 18px;
+  background-color: var(--color-white);
+  border-radius: var(--size-border-radius);
+}
+
+.testimonials__speech-bubble p {
+  color: var(--color-light-grey);
+}
+
+.testimonials__speech-bubble a {
+  color: var(--color-pink);
+}
