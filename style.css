@@ -323,6 +323,7 @@ p {
   border-radius: var(--size-border-radius);
   font-size: var(--font-regular);
   padding: 8px 48px;
+  position: relative;
 }
 
 .category__btn.selected,
@@ -334,7 +335,7 @@ p {
 .category__btn.selected .category__count,
 .category__btn:hover .category__count {
   opacity: 1;
-  top: 0px;
+  top: 5px;
 }
 
 .category__count {
@@ -345,9 +346,9 @@ p {
   color: var(--color-white);
   background-color: var(--color-orange);
   border-radius: 50%;
-  position: relative;
+  position: absolute;
   top: -20px;
-  left: 4px;
+  right: 16px;
   opacity: 0;
   transition: all var(--animation-duration);
 }
@@ -510,6 +511,15 @@ p {
 
 /* For below 768px screen width */
 @media screen and (max-width: 768px) {
+  :root {
+    /* Font size */
+    --font-large: 30px;
+    --font-medium: 18px;
+    --font-regular: 16px;
+    --font-small: 14px;
+    --font-micro: 12px;
+  }
+  
   /* navBar */
   #navbar {
     flex-direction: column;
@@ -533,10 +543,24 @@ p {
 
   .navbar__toggle-btn {
     display: block;
+    top: 16px;
+    right: 16px;
+    font-size: var(--font-medium);
+  }
+
+  .section {
+    padding: 16px;
+    padding-top: 40px;
   }
 
   .about__majors {
     flex-direction: column;
+    margin-top: 30px;
+    margin-bottom: 0px;
+  }
+
+  .job {
+    margin-bottom: 8px;
   }
 
   .major {
@@ -547,12 +571,44 @@ p {
     flex-direction: column;
   }
 
+  .category__btn {
+    margin: 4px 0;
+    width: 100%;
+  }
+
   .project {
     flex-grow: 1;
   }
 
+  .testimonial {
+    flex-direction: column;
+    align-items: center;
+  }
+
   .testimonial__avators {
-    width: 80px;
-    height: 80px;
+    width: 120px;
+    height: 120px;
+  }
+
+  .testimonial__avators:nth-child(odd) {
+    margin: 0;
+    margin-bottom: 8px;
+  }
+  .testimonial__avators:nth-child(even) {
+    margin: 0;
+    margin-bottom: 8px;
+  }
+  
+  .testimonials__speech-bubble {
+    order: 1;
+  }
+
+  .arrow-up {
+    bottom: 16px;
+    right: 16px;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 16px;
   }
 }
