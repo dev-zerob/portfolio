@@ -20,6 +20,7 @@ $navbarMenu.addEventListener('click', (event) => {
     return;
   }
 
+  $navbarMenu.classList.remove('open');
   scrollIntoView(link);
 });
 
@@ -35,6 +36,13 @@ const homeHeight = $home.getBoundingClientRect().height;
 document.addEventListener('scroll', () => {
   $home.style.opacity = 1 - window.scrollY / homeHeight;
 });
+
+// Navbar toggle button for small screen
+const $navbarToggleBtn = document.querySelector('.navbar__toggle-btn');
+$navbarToggleBtn.addEventListener('click', () => {
+  $navbarMenu.classList.toggle('open');
+});
+
 
 // Show "arrow up" button when scrolling down
 const arrowUp = document.querySelector(".arrow-up");
